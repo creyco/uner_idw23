@@ -1,0 +1,3 @@
+nombre, apellido, posicion, nro_dorsal, pie_habil, apodo, titular, foto
+
+

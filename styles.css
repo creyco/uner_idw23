@@ -1,0 +1,461 @@
+/* Estilos para los botones */
+.boton {
+    padding: 10px 20px;
+    background-color:transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1;
+    text-align: center;
+    font-family: 'Race Sport', sans-serif; 
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color:rgb(2, 77, 85);
+    color: white;
+  }
+
+
+
+/* Estilos para el contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    padding: 0 15%;
+}
+body {
+    background-image: url('img/Eltextodelparrafo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 200px;
+    height: 170px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+@font-face {
+    font-family: 'Race Sport';
+    src: url('Fuente/Race\ Sport.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Argentinafont';
+    src: url('Fuente/Argentina\ World\ Cup\ 2022\ Font.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Valorant';
+  src: url('Fuente/Valorant\ Font.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+#inicio {
+    background-image: url('img/Eltextodelparrafo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+#jugadores {
+    background-image: url('img/ARG.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Argentinafont', sans-serif;
+    font-family: 'Valorant Font';
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+    color:white;
+}
+ 
+.galeria {
+        display: flex;
+        height:30rem;
+        gap: 1rem;
+    }
+
+    .galeria > div {
+        flex: 1;
+        border-radius: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        transition: all .8s cubic-bezier(0.25, .4, 0.45, 1.4);
+        position: relative;
+            
+    }
+.galeria > div:hover{
+        flex:5;
+    }
+    .galeria > div p {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        
+    }
+
+    #jugadores h1, #jugadores h2, #jugadores h3, #jugadores h4 {
+      font-size: 24px;
+      color: #ffffff;
+      font-family: 'Argentinafont', sans-serif;
+    }
+    
+    #jugadores p {
+      font-size: 24px;
+      color: #090909;
+      font-family: 'Race Sport', sans-serif;
+    }
+      
+footer {
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        color: white!important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        text-align: center;
+      }
+      
+      footer a {
+        color: white; 
+        margin: 0 10px;
+        justify-content: flex-start;
+        text-align: center;
+      }    
+    .iconos {
+        display: flex;
+        font-size: 35px;
+        column-gap: 25px;
+      }
+   
+@keyframes shake{
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+}
+30% {
+  transform: rotate(15deg);
+}
+40% {
+  transform: rotate(-15deg);
+}
+}
+      
+      footer p{
+        color:white;
+        font-size: 18px;
+        text-align: center;
+        
+
+      }
+
+      
+/* Importación de fuentes de google fonts */ 
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+#contacto body{
+	height: 100%;
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  font-family: 'Race Sport', sans-serif;
+  background-color: #8ED5D5; 
+}
+
+
+.contact_form{	
+	width: 450px; 
+  height: auto;
+  margin: 80px auto;
+	border-radius: 10px;  
+	padding-top: 30px;
+	padding-bottom: 20px;  
+  background-color: transparent; 
+  padding-left: 30px;
+  display: flex; /* opcional, para centrar los elementos internos */
+  flex-direction: column; /* opcional, para que los elementos internos se centren verticalmente */
+  justify-content: center;
+  border: 2px solid rgba(241, 241, 241, 0.26);  
+
+}
+
+
+input{
+	background-color: transparent; 
+	width: 405px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: solid rgba(241, 241, 241, 0.26); 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea{
+  background-color: transparent; 
+	width: 405px; 
+	height: 150px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #377a92; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+
+label{
+  display: block; 
+	float: center; 	
+}
+
+
+button{
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+li {
+  cursor: pointer;
+  font-size: 25px;
+  width: 8em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.5s;
+  margin: 0.8em;
+}
+
+li::before,
+li::after {
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: gainsboro;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
+}
+
+li::before {left: 0; z-index: -1;}
+li::after {right: 0; z-index: -2;}
+
+li:hover {
+  color: white;
+}
+
+li:hover::before,
+li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: dodgerblue;
+}
+
+li:hover::before {
+  top: 0;
+}
+
+li:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
+}
+
+
+button p{
+	color: black; 
+}
+
+
+span{
+	color: #ffffff; 
+}
+
+
+.aviso{
+	font-size: 13px;  
+	color: #ffffff;  
+}
+
+
+#contacto h1{
+	font-size: 24px;  
+	text-align: letf; 
+	padding-bottom: 20px; 
+	color: #ffffff;
+  font-family: 'Race Sport', sans-serif;
+}
+
+
+#contacto h3{
+	font-size: 12px; 
+	padding-bottom: 30px;
+	color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif  
+}
+
+
+#contacto p{
+	font-size: 16px; 
+	color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+
+.formulario textarea:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+
+
+.parent {
+  position: relative; 
+  
+}
+  
+.linea {
+  position: absolute;
+  bottom: 0;
+  left: 250px;
+  right: 200px;
+  height: 1px;
+  background-color: white;
+}
+
+body[data-page="convocatorias"] {
+  background: linear-gradient(to bottom, #1c2331, #007bff);
+}
+#formulario {
+  font-size: 16px;
+  color: #83c9c5;
+  font-family: "Roboto",Arial,sans-serif;
+  margin-top: 5vh;
+  float: left; /* flotar a la izquierda */
+  padding: 20px;
+  width: 40%;
+}
+.tabla {
+  
+  float: right;
+  padding: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: 20px; /* margen derecho para evitar superposición */
+}
+
+
+.contenedor-tabla {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centrar horizontalmente */
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.linea-vertical {
+  border-left: 5px solid #ffffff;
+  height: 600px; /* altura específica */
+  margin-top: 100px;
+  margin-bottom: 150px;
+  position: absolute; /* posición absoluta para que la línea no afecte el diseño de la página */
+  right: 50%; /* mover la línea hacia la derecha */
+  z-index: 1; /* asegurarse de que esté en frente de la tabla */
+}
+#formulario input[type="submit"] {
+  color: #000000;
+  background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+table {
+  border-collapse: collapse;
+  background-color:transparent;
+  color: #83c9c5;
+  font-family: "Roboto",Arial,sans-serif;
+}
+
+td, th {
+  border: 1px solid rgb(254, 254, 254);
+  padding: 10px;
+  
+}
+
+#formulario > input {
+
+  background-color: rgb(255, 255, 255);
+}
+
+#contacto {
+  background: linear-gradient(to bottom, #1c2331, #007bff);
+}
+
+
+/*de clases*/
+

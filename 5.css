@@ -1,0 +1,292 @@
+body{
+    margin: 0px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1980' height='1080' preserveAspectRatio='none' viewBox='0 0 1980 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1281%26quot%3b)' fill='none'%3e%3crect width='1980' height='1080' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1282%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1980 0L1919 0L1980 310.29z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1919 0L1980 310.29L1980 626.03L1215.19 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1215.19 0L1980 626.03L1980 869.64L855.8600000000001 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M855.8600000000001 0L1980 869.64L1980 898.33L690.9900000000001 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1080L939.52 1080L0 790.81z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 790.81L939.52 1080L1131.21 1080L0 449.06999999999994z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 449.06999999999994L1131.21 1080L1290.43 1080L0 426.87999999999994z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 426.8799999999999L1290.43 1080L1453.91 1080L0 322.9699999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1281'%3e%3crect width='1980' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='11.36%25' y1='-20.83%25' x2='88.64%25' y2='120.83%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1282'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(44%2c 109%2c 193%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1em 2em;
+  }
+  
+  header {
+    background: #ffffff00;
+    color: white;
+    width: 90%;
+    margin: 10px 10px;
+  }
+  
+  /* Hacer que la tabla sea responsive usando Flexbox */
+  table {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 10px 10px;
+  }
+  
+  table img {
+    width: 40px;
+    /*height: auto; */
+  }
+  
+  table img:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+  }
+  
+  table td, table th {
+    border: 1px solid #000;
+    padding: 5px 10px ;
+    /* background-color: aqua; */
+  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  table tr:hover {background-color: rgba(200, 200, 200, 0.368);}
+  
+  table th {
+    /* position:  */
+    /* float: ; */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #040aaa1c;
+    color: white;
+  }
+  
+  thead {
+    flex: 0 0 auto;
+  }
+  
+  table .tbody {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    
+  }
+  h2 {
+    text-align:center;
+  }
+  
+  /*
+  tr {
+    display: flex;
+  }
+  th,td {
+    flex: 1 1 auto;
+  }
+  */
+  
+  /* Alternar los colores de fondo de las filas de la tabla entre celeste y blanco */
+  tbody tr:nth-child(odd) {
+    background-color: rgba(241, 240, 242, 0.035);
+    color: white;
+    text-align:center;
+    
+    
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgb(180, 176, 176);
+    text-align:center;
+  }
+  
+  .modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:  rgba(24, 158, 173, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #592d8b;
+    color:white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor:pointer;
+  }
+  
+  @media( max-width: 30em){
+  
+    table tr{
+      display: flex;
+      flex-direction: column;
+      border: 1px solid grey;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+  }  /* 30 × 16px = 480px*/
+  /*-------------------edicion de tabla*/
+  
+  .edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .edit-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+  }
+  
+  .edit-close-button {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .edit-form {
+    margin-top: 10px;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .edit-form input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .edit-form button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .edit-form button#edit-delete-button {
+    background-color: red;
+  }
+  
+  .edit-form button[type="submit"]:hover,
+  .edit-form button[type="button"]:hover {
+    background-color: darkblue;
+  }
+  
+  button{
+    padding: 5px 15px;
+    border: unset;
+    border-radius: 15px;
+    color: #ffffff;
+    z-index: 1;
+    background: #053b82;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #2793cd;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+   /* Estilos para los botones */
+.boton {
+    padding: 10px 20px;
+    background-color:transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    margin-right: 10px;
+    flex: 1;
+    text-align: center;
+    font-family: 'Race Sport', sans-serif; 
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color:rgb(2, 77, 85);
+    color: white;
+  }
+
+
+
+/* Estilos para el contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10vh;
+    padding: 0 10%;
+    position: relative;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+.linea {
+    position: relative;
+    bottom: 83%;
+      left: 50%;
+      width: 80%; /* Ajusta el ancho de la línea según tus necesidades */
+      height: 2px;
+      background-color: white;
+      transform: translate(-50%, 50%);
+      z-index: 999;
+  }
+@font-face {
+    font-family: 'Race Sport';
+    src: url('Fuente/Race\ Sport.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}

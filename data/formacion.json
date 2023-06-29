@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "formacion": "1_4_4_2",
+        "Arquero": 1,
+        "Defensor": 4,
+        "Mediocampo": 4,
+        "Delantero": 2                
+    },
+    {
+        "id": 1,
+        "formacion": "1_4_3_3",
+        "Arquero": 1,
+        "Defensor": 4,
+        "Mediocampo": 3,
+        "Delantero": 3 
+      
+    },
+    {
+        "id": 2,
+        "formacion": "1_4_5_1",
+        "Arquero": 1,
+        "Defensor": 4,
+        "Mediocampo": 5,
+        "Delantero": 1 
+    }
+]

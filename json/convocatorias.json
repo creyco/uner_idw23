@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "fecha": "2023-06-15",
+        "rival": "Colombia",
+        "capitan": "Dibu"
+    },
+    {
+        "id": 1,
+        "fecha": "2023-07-24",
+        "rival": "Italia",
+        "capitan": "Messi"
+    },
+    {
+        "id": 2,
+        "fecha": "2023-07-27",
+        "rival": "Sudáfrica",
+        "capitan": "Messi"
+    },
+    {
+        "id": 3,
+        "fecha": "2023-07-28",
+        "rival": "Inglaterra",
+        "capitan": "Messi"
+    },
+    {
+        "id": 4,
+        "fecha": "2023-08-02",
+        "rival": "Suecia",
+        "capitan": "Messi"
+    }
+]

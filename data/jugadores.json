@@ -1,0 +1,222 @@
+[
+  {
+    "nombre": "Emiliano",
+    "apellido": "Martínez",
+    "posicion": "Arquero",
+    "nro_dorsal": 23,
+    "pie_habil": "Derecho",
+    "apodo": "Dibu",
+    "titular": true, 
+    "foto":  "1dibu2.jpg"
+  },
+  {
+    "nombre": "Franco",
+    "apellido": "Armani",
+    "posicion": "Arquero",
+    "nro_dorsal": 1,
+    "pie_habil": "Derecho",
+    "apodo": "El Mono",
+    "titular": false, 
+    "foto": "1armani.jpg"
+  },
+  {
+    "nombre": "Gerónimo",
+    "apellido": "Rulli",
+    "posicion": "Arquero",
+    "nro_dorsal": 1,
+    "pie_habil": "Derecho",
+    "apodo": "Rulli",
+    "titular": false, 
+    "foto": "1rulli.jpg"
+  },  
+  {
+    "nombre": "Gonzalo",
+    "apellido": " Montiel",
+    "posicion": "Defensor",
+    "nro_dorsal": 4,
+    "pie_habil": "Derecho",
+    "apodo": "Monti",
+    "titular": true, 
+    "foto":  "Dmontiel.jpg"
+  },
+  {
+    "nombre": "Nicolás",
+    "apellido": "Otamendi",
+    "posicion": "Defensor",
+    "nro_dorsal": 2,
+    "pie_habil": "Derecho",
+    "apodo": "Ota",
+    "titular": false, 
+    "foto":  "Dotamendi.jpg"
+  },
+  {
+    "nombre": "Lucas",
+    "apellido": "Martínez Quarta",
+    "posicion": "Defensor",
+    "nro_dorsal": 13,
+    "pie_habil": "Derecho",
+    "apodo": "Martínez Quarta",
+    "titular": false, 
+    "foto":  "Dmartinez.jpg"
+  },
+  {
+    "nombre": "Lisandro",
+    "apellido": "Martínez",
+    "posicion": "Defensor",
+    "nro_dorsal": 6,
+    "pie_habil": "Izquierdo",
+    "apodo": "Licha",
+    "titular": false, 
+    "foto":  "Dlmartinez.jpg"
+  },
+  {
+    "nombre": "Nicolás",
+    "apellido": "Tagliafico",
+    "posicion": "Defensor",
+    "nro_dorsal": 3,
+    "pie_habil": "Izquierdo",
+    "apodo": "Taglia",
+    "titular": true, 
+    "foto":  "Dtagliafico.jpg"
+  },
+  {
+    "nombre": "Germán",
+    "apellido": "Pezzella",
+    "posicion": "Defensor",
+    "nro_dorsal": 19,
+    "pie_habil": "Derecho",
+    "apodo": "Peze",
+    "titular": false, 
+    "foto":  "Dpezzella.jpg"
+  },
+  {
+    "nombre": "Marcos",
+    "apellido": "Acuña",
+    "posicion": "Defensor",
+    "nro_dorsal": 8,
+    "pie_habil": "Izquierdo",
+    "apodo": "Huevo",
+    "titular": false, 
+    "foto":  "Dacuña.jpg"
+  },
+  {
+    "nombre": "Rodrigo",
+    "apellido": "De Paul",
+    "posicion": "Mediocampo",
+    "nro_dorsal": 16,
+    "pie_habil": "Derecho",
+    "apodo": "RDP",
+    "titular": true, 
+    "foto":  "Mdepaul.jpg"
+  },
+  {
+    "nombre": "Leandro",
+    "apellido": "Paredes",
+    "posicion": "Mediocampo",
+    "nro_dorsal": 5,
+    "pie_habil": "Izquierdo",
+    "apodo": "Pared",
+    "titular": true, 
+    "foto":  "Mparedes.jpg"
+  },
+  {
+    "nombre": "Guido",
+    "apellido": " Rodríguez",
+    "posicion": "Mediocampo",
+    "nro_dorsal": 15,
+    "pie_habil": "Derecho",
+    "apodo": "Guido",
+    "titular": true, 
+    "foto":  "Mrodriguez.jpg"
+  },
+  {
+    "nombre": "Ángel",
+    "apellido": "Di María",
+    "posicion": "Delantero",
+    "nro_dorsal": 11,
+    "pie_habil": "Zurdo",
+    "apodo": "Fideo",
+    "titular": true, 
+    "foto":  "Ddimaria.jpg"
+  },
+  {
+    "nombre": "Lionel",
+    "apellido": "Messi",
+    "posicion": "Delantero",
+    "nro_dorsal": 10,
+    "pie_habil": "Zurdo",
+    "apodo": "Leo",
+    "titular": true, 
+    "foto":  "Dmessi.jpg"
+  },
+  {
+    "nombre": "Lautaro",
+    "apellido": "Martínez",
+    "posicion": "Delantero",
+    "nro_dorsal": 22,
+    "pie_habil": "Derecho",
+    "apodo": "Toro",
+    "titular": false, 
+    "foto":  "Dlautaro.jpg"
+  },
+  {
+    "nombre": "Nicolás",
+    "apellido": "González",
+    "posicion": "Delantero",
+    "nro_dorsal": 18,
+    "pie_habil": "Izquierdo",
+    "apodo": "Nico",
+    "titular": false, 
+    "foto":  "Dgonzales.jpg"
+  },  
+  {
+    "nombre": "Joaquín",
+    "apellido": "Correa",
+    "posicion": "Delantero",
+    "nro_dorsal": 7,
+    "pie_habil": "Zurdo",
+    "apodo": "Tucu",
+    "titular": false, 
+    "foto":  "Dcorrea.jpg"
+  },
+  {
+    "nombre": "Exequiel",
+    "apellido": "Palacios",
+    "posicion": "Mediocampo",
+    "nro_dorsal": 21,
+    "pie_habil": "Derecho",
+    "apodo": "Palacios",
+    "titular": true, 
+    "foto":  "Mpalacios.jpg"
+  },  
+  {
+    "nombre": "Julián",
+    "apellido": "Álvarez",
+    "posicion": "Delantero",
+    "nro_dorsal": 17,
+    "pie_habil": "Derecho",
+    "apodo": "Álvarez",
+    "titular": true, 
+    "foto":  "Dalvarez.jpg"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Foyth",
+    "posicion": "Defensor",
+    "nro_dorsal": 17,
+    "pie_habil": "Derecho",
+    "apodo": "Foyth",
+    "titular": false, 
+    "foto":  "Dfoyth.jpg"
+  },  
+  {
+    "nombre": "Nahuel",
+    "apellido": "Molina Lucero",
+    "posicion": "Defensor",
+    "nro_dorsal": 4,
+    "pie_habil": "Derecho",
+    "apodo": "Molina",
+    "titular": true, 
+    "foto":  "Dmolina.jpg"
+  } 
+]

@@ -1,0 +1,615 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1980' height='1080' preserveAspectRatio='none' viewBox='0 0 1980 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1281%26quot%3b)' fill='none'%3e%3crect width='1980' height='1080' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1282%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1980 0L1919 0L1980 310.29z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1919 0L1980 310.29L1980 626.03L1215.19 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1215.19 0L1980 626.03L1980 869.64L855.8600000000001 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M855.8600000000001 0L1980 869.64L1980 898.33L690.9900000000001 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1080L939.52 1080L0 790.81z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 790.81L939.52 1080L1131.21 1080L0 449.06999999999994z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 449.06999999999994L1131.21 1080L1290.43 1080L0 426.87999999999994z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 426.8799999999999L1290.43 1080L1453.91 1080L0 322.9699999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1281'%3e%3crect width='1980' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='11.36%25' y1='-20.83%25' x2='88.64%25' y2='120.83%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1282'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(44%2c 109%2c 193%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color:white;
+
+}
+
+
+#formationDetails {
+  background-color: lightblue;
+  font-size: 15px;
+  color: black;
+  padding: 1px;
+  text-align: center;
+} 
+.titulo {
+  display: block;
+  background-color: rgb(61, 16, 195);
+  color: white;
+  font-size: 35px;
+  height: 50px;
+  text-align: center;
+  margin: 0px;    
+}
+
+nav ul {
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+nav ul li{
+  flex: auto;
+  padding: 10px;
+  background-color: rgba(67, 74, 167, 0);
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Race Sport', sans-serif;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none; 
+}
+
+nav ul li:hover {
+    background-color:rgb(246, 246, 246);
+    color: white;
+  }
+
+  nav ul li a{   
+  color: black;
+  text-decoration: none;    
+}
+
+nav ul li filter-button{   
+  color: black;
+  text-decoration: none;    
+}
+
+
+nav ul li a:hover{
+  background-color: white;
+}
+
+
+/* Estilos para el contenedor de jugadores */
+.container {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+}
+
+.player {    
+    width: 20%;
+    text-align: center;
+    margin: 10px;  
+}
+
+/* Estilos para cada jugador */
+.player div {
+  display: flex;
+  
+  justify-content: center;
+  width: 80%;  
+  margin: 10px;
+}
+
+/* Estilos para la imagen del jugador */
+.player img {  
+  border: 1px solid blue;
+  width: 75%;
+  height: 75%;  
+  margin: 5px;
+  object-fit: cover;
+  object-position: center;
+  padding: 6px;
+  border-radius: 25px;    
+}
+
+
+/* Estilos para el nombre del jugador */
+.position-container > h2 {
+  flex: auto;  
+  border: 1px solid rgba(0, 0, 0, 0);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  color:white;
+}
+
+/* .position-container > button{
+  flex: auto;
+  border: 2px solid black;
+  text-align: center;
+  background-color: red;
+} */
+
+   /* Estilos para los botones */
+   .boton {
+    padding: 10px 20px;
+    background-color:transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    margin-right: 10px;
+    flex: 1;
+    text-align: center;
+    font-family: 'Race Sport', sans-serif; 
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color:rgb(2, 77, 85);
+    color: white;
+  }
+
+
+
+/* Estilos para el contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10vh;
+    padding: 0 10%;
+    position: fixed;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+.linea {
+    position: fixed;
+    bottom: 85%;
+      left: 50%;
+      width: 80%; /* Ajusta el ancho de la línea según tus necesidades */
+      height: 2px;
+      background-color: white;
+      transform: translate(-50%, 50%);
+      z-index: 999;
+  }
+@font-face {
+    font-family: 'Race Sport';
+    src: url('Fuente/Race\ Sport.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src:
+		url('../fonts/FiraSansCondensed-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src:
+		url('../fonts/FiraSansCondensed-Medium.ttf') format('truetype');
+	font-style: bold;
+	font-weight: bold;
+
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed italic';
+	src:
+		url('../fonts/FiraSansCondensed-Italic.ttf') format('truetype');
+
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed semibol';
+	src:
+		url('../fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
+	font-style: bold;
+	font-weight: bold;
+}
+
+
+button{
+  padding: 5px 15px;
+  border: unset;
+  border-radius: 15px;
+  color: #ffffff;
+  z-index: 1;
+  background: #053b82;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #2793cd;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+ 
+ button:hover {
+  color: #e8e8e8;
+ }
+ 
+ button:hover::before {
+  width: 100%;
+ }
+
+ /*convocatorias*/
+
+ #exTab3 .nav-pills > li > a {
+  border-radius: 4px;
+  font-size: 18px;
+}
+#exTab3 .nav-pills > li > a:hover{
+  color:#fff;
+}
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+.nav-pills>li+li{
+    margin-left: 0px !important;
+    margin-bottom: 30px;
+}
+#exTab3 .nav-pills > li > a > i{
+    display: block;
+    font-size: 55px;
+    margin-bottom:15px;
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+}
+#exTab3 .nav-pills > li > a:hover i{
+    -webkit-transform: scale(1.1,1.1) rotate(360deg);
+    -moz-transform: scale(1.1,1.1) rotate(360deg);
+    -o-transform: scale(1.1,1.1) rotate(360deg);
+    transform: scale(1.1,1.1) rotate(360deg);
+}
+.nav-pills>li.color-blue>a, .nav-pills>li.color-blue>a:hover, .nav-pills>li.color-blue>a:focus{
+    background-color: #337ab7 !important;
+}
+.nav-pills>li.color-green>a, .nav-pills>li.color-green>a:hover, .nav-pills>li.color-green>a:focus{
+    background-color: #33b7a3 !important;
+}
+.color-green a, .color-red a, .color-blue a{
+    color: #fff;
+}
+.nav-pills>li.color-red>a, .nav-pills>li.color-red>a:hover, .nav-pills>li.color-red>a:focus{
+    background-color: #b73346 !important;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+    background-color: inherit;
+}
+#exTab3 .tab-content{
+    background-color: inherit;
+}
+.tab-pane{
+    padding: 5px 15px;
+}
+.tab-pane:nth-child(1){
+    background-color: #337ab7 !important;
+}
+.tab-pane:nth-child(2){
+    background-color: #33b7a3 !important;
+}
+.tab-pane:nth-child(3){
+    background-color: #b73346 !important;
+}
+
+
+/***************** Página de Convocatorias: NUEVA CONVOCATORIA***********************************/
+section.cont-nuconv {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+
+	align-content: center;
+	width: 100%;
+
+	/* margin: 0 calc(5em + 1vw);  */
+}
+
+div.cont-form-conv {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction:row;
+	
+}
+
+div.cont-boton {
+	display: flex;
+	justify-content: center;
+	flex-flow: row;
+}
+
+div.cont-boton button {
+	width: 170px !important;
+	margin: 10px !important;
+}
+
+button.boton2b {
+	width: 105px;
+	height: 53px;
+	background-color: #428bca;
+	border: 1.5px solid #F6F9FB;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 5px 10px;
+}
+
+button.boton2b:hover {
+	color: #BAD6DA;
+	background-color: #428bca;
+	border: 0;
+
+}
+
+button.boton2bc {
+	/* flex-direction: row; */
+	width: 131px;
+	height: 53px;
+	background-color: #428bca;
+	border: 1.5px solid #F6F9FB;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 5px 10px;
+}
+
+.boton2bc:hover {
+	color: #BAD6DA;
+	/* background-color: rgb(2, 85, 121); */
+	border: 0;
+
+}
+/***************** Página de Convocatorias***********************************/
+section.cont-convocatorias {
+	display: flex;
+	flex-flow: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+}
+
+div.convo-t {
+	display: flex;
+	flex-flow: wrap;
+  color:white;
+	align-content: flex-start;
+	justify-content: center;
+	font-family: 'Race Sport', sans-serif; 
+    transition: all 0.3s ease;
+	
+	
+	flex: 100%;
+	letter-spacing: 3.25px;
+	width: 100%;
+
+}
+
+div.convo-t h1 {
+	flex-wrap: wrap;
+	display: block;
+	text-align: center;
+	font-size: calc(4.5vw + 0.7em) !important;
+}
+
+div.nav-convocatoria {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+
+}
+
+button.nav-conv {
+	border: 0px;
+	background-color: #428bca;
+	padding: 0px;
+	margin: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button.nav-conv:hover {
+	color: #BAD6DA;
+	background-color: #052035;
+	border: 0;
+
+}
+
+div.item {
+	flex-direction: column;
+	justify-content: center;
+
+	width: 202PX;
+	height: 179px;
+
+
+}
+
+div.item img {
+	width: 65%;
+	align-items: center;
+}
+
+div.item p {
+	margin: 0px;
+	text-align: center;
+	font-size: 24px;
+	color: #F6F9FB;
+}
+
+/***************** Página de Convocatorias: NUEVA CONVOCATORIA***********************************/
+section.cont-nuconv {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+
+	align-content: center;
+	width: 100%;
+
+	/* margin: 0 calc(5em + 1vw);  */
+}
+
+div.cont-form-conv {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction:row;
+	
+}
+
+div.cont-boton {
+	display: flex;
+	justify-content: center;
+	flex-flow: row;
+}
+
+div.cont-boton button {
+	width: 170px !important;
+	margin: 10px !important;
+}
+
+button.boton2b {
+	width: 105px;
+	height: 53px;
+	background-color: #428bca;
+	border: 1.5px solid #F6F9FB;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 5px 10px;
+}
+
+button.boton2b:hover {
+	color: #BAD6DA;
+	background-color: #428bca;
+	border: 0;
+
+}
+
+button.boton2bc {
+	/* flex-direction: row; */
+	width: 131px;
+	height: 53px;
+	background-color: #428bca;
+	border: 1.5px solid #F6F9FB;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 5px 10px;
+}
+
+.boton2bc:hover {
+	color: #BAD6DA;
+	/* background-color: rgb(2, 85, 121); */
+	border: 0;
+
+}
+
+/***************************Buscar Convocatoria*****************************/
+section.res-convocaroria{ 
+	display: flex; 
+	justify-content: center; 
+	width: 100%; 
+} 
+div.contenedorTabla{ 
+	display: flex; 
+	text-align: center; 
+	justify-content: center; 
+	align-items: center; 
+	 
+} 
+table.tabla-con{ 
+	justify-content: space-between; 
+	/* background-color:#027496; */ 
+	font-size: 24px; 
+	 
+	 
+	 
+} 
+table.tabla-con th{ 
+	margin: 5px 10px; 
+	padding: 5px 10px; 
+	background-color: #428bca; 
+	color: #F6F9FB; 
+} 
+
+/**/
+div.cont-form-conv2 {
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction:row;
+	
+}
+
+div.boton2bcd {
+	display: flex;
+	justify-content: center;
+	flex-flow: row;
+	/* background-color: none; */
+} 
+
+div.boton2bcd button {
+	width: 170px !important;
+	margin: 10px !important;
+}
+
+div.boton2bc button {
+	/* flex-flow: row ; */
+	width: 131px;
+	height: 53px;
+	background-color: #428bca;
+	border: 1.5px solid #F6F9FB;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 5px 10px;
+}
+
+div.boton2bc button:hover {
+	color: #BAD6DA;
+	background-color: #428bca;
+	border: 0;
+
+}
+section.cont-convocatorias-2{
+	display: flex;
+	justify-content: center;
+	align-items:flex-start;
+	/* flex-direction:row; */
+	padding: 10px;
+	/* flex-flow:row !important; */
+	width: 100%;
+}
+
