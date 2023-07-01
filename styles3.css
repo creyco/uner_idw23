@@ -1,3 +1,13 @@
+body {
+    background-image: url('img/fondo-messi.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
 /* Estilos para los botones */
 .boton {
     padding: 10px 20px;
@@ -18,8 +28,6 @@
     color: white;
   }
 
-
-
 /* Estilos para el contenedor de los botones */
 .botones-container {
     display: flex;
@@ -31,15 +39,6 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-}
-body {
-    background-image: url('img/Eltextodelparrafo.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
 }
 
 @font-face {
@@ -65,7 +64,7 @@ body {
 
 
 #inicio {
-    background-image: url('img/Eltextodelparrafo.png');
+    background-image: url('img/fondo-messi.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

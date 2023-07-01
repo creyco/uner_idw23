@@ -1,90 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JUGADORES</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<title>Seleccion de Jugadores</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" type="text/css" href="css/jugadores.css">
 </head>
-<body id="jugadores" style="background-image: url('img/ARG.jpg');">
-    
-   
-    
-    <a href="index.html">
-        <img src="img/pngwing.png" width="200" height="170" alt="Logo AFA">
-    </a>
-    
+<body>
 
-    
-<div class="botones-container">
-    <!-- Botones en la parte superior -->
-    <a href="index.html" class="boton">Inicio</a>
-    <a href="jugadores.html" class="boton">Scaloneta</a>
-    <a href="listado.html" class="boton">Jugadores</a>
-    <a href="convocatorias.html" class="boton">Convocatorias</a>
-    <a href="contacto.html" class="boton">Contacto</a>
-    <a href="institucional.html" class="boton">Institucional</a>
-</div>
- 
+    <a href="https://www.afa.com.ar/es/home"><img src="img/pngwing.png" width="200" height="170" alt="Logo AFA"></a>
 
-<div class="parent">
-   
-    
-    <div class="linea"> </div>
+    <div class="botones-container">
+        <!-- Botones en la parte superior -->
+        <a href="index.html" class="boton">Inicio</a>
+        <a href="escaloneta.html" class="boton">Scaloneta</a>
+        <a href="jugadores.html" class="boton">Jugadores</a>
+        <a href="convocatorias.html" class="boton">Convocatorias</a>
+        <a href="contacto.html" class="boton">Contacto</a>
+        <a href="institucional.html" class="boton">Institucional</a>
     </div>
+        
+    <div class="parent">       
+        <div class="linea"> </div>
+        </div> 
+    <br>
+    <br> 
 
-<h1>Arqueros</h1>
-
-
-<div class="galeria">
-    <div style="background-image: url(img/jugadores/1dibu.jpg);"> <p>Emiliano Martinez</p></div>
-    <div style="background-image: url(img/jugadores/1armani.jpg);"><p>Franco Armani</p></div>
-    <div style="background-image: url(img/jugadores/1Rulli.jpg);"><p>Geronimo Rulli</p></div>
-</div>
-
-
-<h2>Defensa</h2>
+    <header>
+        <div class="container">           
+            <nav>
+                <button id="create-button">Crear jugador</button>
+                <button id="exit-button">Salir y guardar cambios</button>
+                <button id="cancel-button">Salir sin guardar cambios</button>
+            </nav>
+        </div>
+    </header>
+   <br>
+   <br>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Posición</th>
+            <th>Dorsal</th>
+            <th>Pie hábil</th>
+            <th>Apodo</th>            
+            <th>Foto</th>
+        </tr>
+        </thead>
+        <tbody>
             
-<div class="galeria"> 
-  <div style="background-image: url(img/jugadores/Dacuña.jpg);" ><p>Marcos Acuña</p></div>
-  <div style="background-image: url(img/jugadores/Dfoyth.jpg);"><p>Juan Foyth</p></div>
-  <div style="background-image: url(img/jugadores/Dmartinez.jpg);"><p>Lisandro Martinez</p></div>
-  <div style="background-image: url(img/jugadores/Dmolina.jpg);" ><p>Nahuel Molina</p></div>
-  <div style="background-image: url(img/jugadores/Dmontiel.jpg);" ><p>Gonzalo Montiel</p></div>
-  <div style="background-image: url(img/jugadores/Dotamendi.jpg);" ><p>Nicolas Otamendi</p></div>
-  <div style="background-image: url(img/jugadores/Dpezzella.jpg);" ><p>German Pezzella</p></div>
-  <div style="background-image: url(img/jugadores/DRomero.jpg);" ><p>Cristian Romero</p></div>
-  <div style="background-image: url(img/jugadores/Dtagliafico.jpg);" ><p>Nicolas Tagliafico</p></div>
-</div>
-
-<h3>Mediocampo</h3>
-
-<div class="galeria"> 
-<div style="background-image: url(img/jugadores/Mdepaul.jpg);" ><p>Rodrigo De Paul</p></div>
-<div style="background-image: url(img/jugadores/Mparedes.jpg);"><p>Leandro Paredes</p></div>
-<div style="background-image: url(img/jugadores/Mmacallister.jpg);"><p>Alexis MacAllister</p></div>
-<div style="background-image: url(img/jugadores/MRodriguez.jpg);" ><p>Guido Rodriguez</p></div>
-<div style="background-image: url(img/jugadores/MGomez.jpg);" ><p>Alejandro Gomez</p></div>
-<div style="background-image: url(img/jugadores/Mfernandez.jpg);" ><p>Enzo Fernandez</p></div>
-<div style="background-image: url(img/jugadores/Mpalacios.jpg);" ><p>Exequiel Palacios</p></div>
-<div style="background-image: url(img/jugadores/Malmada.jpg);" ><p>Thiago Almada</p></div>
-</div>
+        </tbody>
+    </table>
     
-
-<h4>Delanteros</h4>
-
-<div class="galeria"> 
-  
-<div style="background-image: url(img/jugadores/Dmessi.jpg);" ><p>Lionel Messi</p></div>
-<div style="background-image: url(img/jugadores/Ddimaria.jpd.jpg);"><p>Angel Di Maria</p></div>
-<div style="background-image: url(img/jugadores/Dlautaro.jpg);"><p>Lautaro Martinez</p></div>
-<div style="background-image: url(img/jugadores/Dalvarez.jpg);" ><p>Julian Alvarez</p></div>
-<div style="background-image: url(img/jugadores/Ddybala.jpg);" ><p>Paulo Dybala</p></div>
-<div style="background-image: url(img/jugadores/Dcorrea.jpg);" ><p>Angel Correa</p></div>
-</div>
-
-
-
+    <script src="js/jugadores.js"></script>
 </body>
-
-
 </html>
