@@ -1,0 +1,69 @@
+[
+	{"003":	 
+		[
+		 {
+			"id_player": 0,    
+			"apellido": "Martinez",
+			"nombre": "Emiliano",
+			"posicion": "Arquero",
+			"apodo": "Dibu",
+			"dorsal": "23",
+			"pieHabil": "Derecho"
+		 },
+		 {
+			
+			"id_player": 2,        
+			"apellido": "Rulli",
+			"nombre": "Gerónimo",
+			"posicion": "Arquero",
+			"apodo": "-",
+			"dorsal": "12",
+			"pieHabil": "Derecho"
+		},		
+		{
+			
+			"id_player": 4,       
+			"apellido": "Molina",
+			"nombre": "Nahuel",
+			"posicion": "Defensor",
+			"apodo": "-",
+			"dorsal": "26",
+			"pieHabil": "Derecho"
+		}
+		]
+   },
+   {"004":	 
+		[
+		 {
+			"id_player": 0,    
+			"apellido": "Martinez",
+			"nombre": "Emiliano",
+			"posicion": "Arquero",
+			"apodo": "Dibu",
+			"dorsal": "23",
+			"pieHabil": "Derecho"
+		 },
+		 {
+			
+			"id_player": 2,        
+			"apellido": "Rulli",
+			"nombre": "Gerónimo",
+			"posicion": "Arquero",
+			"apodo": "-",
+			"dorsal": "12",
+			"pieHabil": "Derecho"
+		},		
+		{
+			
+			"id_player": 4,       
+			"apellido": "Molina",
+			"nombre": "Nahuel",
+			"posicion": "Defensor",
+			"apodo": "-",
+			"dorsal": "26",
+			"pieHabil": "Derecho"
+		}
+		]
+   }   
+]
+

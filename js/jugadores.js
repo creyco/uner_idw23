@@ -277,7 +277,7 @@ function saveChanges() {
    if (confirm('¿Estás seguro de que quieres salir y guardar los cambios?')) {
      saveChanges();
      //savePlayersToJSON
-     window.close();
+     window.location.href = 'index.html';
    }
  });
 
@@ -286,7 +286,7 @@ document.querySelector('#cancel-button').addEventListener('click', () => {
   console.log('Botón de salir sin guardar cambios presionado');
   if (confirm('¿Estás seguro de que quieres salir sin guardar los cambios?')) {
     localStorage.setItem('jugadores', initialData); // Restaurar el estado inicial
-    window.close();
+    window.location.href = 'index.html';
   }
 });
 

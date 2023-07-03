@@ -247,45 +247,28 @@ guardarButton.addEventListener("click", () => {
 });
 
 function guardarDatosTitulares() {
-  const id_convocada = 1; // Número de convocatoria
-  const nro_convocada = id_convocada.toString().padStart(3, '0');
+  const  id_convocada = 1; // Número de convocatoria
+  const nro_convocada = id_convocada.toString().padStart(3, '000')
 
   // Obtener los jugadores titulares
-  let jugadoresTitulares = JSON.parse(localStorage.getItem("titulares")) || [];
+  const jugadoresTitulares = JSON.parse(localStorage.getItem("titulares")) || [];
 
   // Eliminar los registros existentes de la convocatoria actual
-  jugadoresTitulares = jugadoresTitulares.filter((convocatoria) => Object.keys(convocatoria)[0] !== nro_convocada);
+  const nuevosTitulares = jugadoresTitulares.filter((jugador) => jugador.id_convocada !== nro_convocada);
 
   // Obtener los jugadores seleccionados como titulares
   const jugadores = JSON.parse(localStorage.getItem("players"));
   const jugadoresSeleccionados = jugadores.filter((jugador) => jugador.titular);
 
-  // Crear un objeto con los nuevos jugadores titulares
-  const nuevosTitulares = {
-    [nro_convocada]: jugadoresSeleccionados.map((jugador) => ({
-      id_player: jugador.id,
-      apellido: jugador.apellido,
-      nombre: jugador.nombre,
-      posicion: jugador.posicion,
-      apodo: jugador.apodo,
-      dorsal: jugador.dorsal,
-      piehabil: jugador.piehabil
-    }))
-  };
- 
   // Agregar los nuevos jugadores titulares a la lista
-  jugadoresTitulares.push(nuevosTitulares);
-
-  // Guardar los titulares en titulares.json
-  const fs = require('fs');
-  fs.writeFile('titulares.json', JSON.stringify(jugadoresTitulares), (err) => {
-    if (err) throw err;
-    console.log('Datos guardados en titulares.json');
-
-
+  nuevosTitulares.push(...jugadoresSeleccionados.map((jugador) => ({
+    id_convocada: nro_convocada,
+    id_jugador: jugador.id,
+    posicion: jugador.posicion
+  })));
 
   // Guardar los nuevos datos de los jugadores titulares
-  localStorage.setItem("titulares", JSON.stringify(jugadoresTitulares));
+  localStorage.setItem("titulares", JSON.stringify(nuevosTitulares));
 
   // Mostrar mensaje de éxito o redireccionar a otra página
   alert("Los datos de los jugadores titulares se han guardado correctamente.");

@@ -16,6 +16,7 @@ if (localStorage.getItem('jugadores') === null) {
   displayJugadores(jugadores);
   }
 
+
  // Función para mostrar los jugadores en la tabla
  function displayJugadores(jugadores) {
   const tableBody = document.querySelector('table tbody');
@@ -287,7 +288,9 @@ document.querySelector('#cancel-button').addEventListener('click', () => {
   console.log('Botón de salir sin guardar cambios presionado');
   if (confirm('¿Estás seguro de que quieres salir sin guardar los cambios?')) {
     localStorage.setItem('jugadores', initialData); // Restaurar el estado inicial
-    window.close();
+    
+    window.location.href = 'index.html';
+
   }
 });
 
