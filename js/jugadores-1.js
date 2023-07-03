@@ -1,5 +1,6 @@
 // Leer el archivo data/jugadores.json usando fetch y almacenarlo en la memoria local si no existe
-let initialData = [] 
+// localStorage.clear();  //<---Limpia la memoria local
+let initialData = []
 if (localStorage.getItem('jugadores') === null) {
   fetch('data/jugadores.json')
     .then(response => response.json())
@@ -148,7 +149,7 @@ if (localStorage.getItem('jugadores') === null) {
       <div class="jugador-info">                
         <img class="jugador-image" src="img/${jugador.imagen}" alt="" />        
       </div>        
-      <form class="form_input">
+        <form class="form_input">
         <div class="form-row">
           <label>ID:</label> 
           <input type="number" name="id" value="${jugador.id}" readonly />
@@ -255,8 +256,8 @@ function deletejugador(jugador) {
 
 function saveChanges() {
   const jugadores = JSON.parse(localStorage.getItem('jugadores'));
+  const jsonData = JSON.stringify(jugadores ,null,4);
   
-  const jsonData = JSON.stringify(jugadores ,null,4)
   
   // Guardar los cambios en la memoria local
   localStorage.setItem('jugadores', jsonData);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convocar Jugadores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logoafa.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/jugadores.css">
+</head>
+</head>
+<body>   
+
+    <header>
+        <h1>Convocatoria de Jugadores</h1>
+        <div id="convocatoria-info"></div>
+    </header>
+    <div class="button-container">
+        <div class="container">
+            <select class="form-select" id="posicion">
+                <option value="todos">Todos</option>
+                <option value="arquero">Arquero</option>
+                <option value="defensa">Defensa</option>
+                <option value="mediocampo">Mediocampista</option>
+                <option value="delantero">Delantero</option>
+            </select>
+            <div class="button-container">
+            <button id="exit-button">Salir y Guardar cambios</button>
+            <button id="cancel-button" type="reset">Salir sin guardar cambios</button>
+            </div>
+        </div>
+    </div>  
+  
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Posición</th>
+            <th>Dorsal</th>
+            <th>Pie hábil</th>
+            <th>Apodo</th>            
+            <th>Foto</th>
+        </tr>
+        </thead>
+        <tbody id="jugadores-table-body">
+            
+        </tbody>
+    </table>
+    
+    <script src="cJugadores.js"></script>
+    
+</body>
+</html>
