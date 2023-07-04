@@ -6,57 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Campo para ingresar el número de convocatoria -->
-<label for="nro_convocada">Número de convocatoria:</label>
-<input type="number" id="nroConvocada" />
+
 
 <!-- Botón para leer los jugadores titulares -->
 <button id="leerTitulares">Leer titulares</button>
 
-<!-- Contenedor para mostrar los jugadores titulares -->
-<div id="titulares"></div>
 
 <script>
   // Función para leer los jugadores titulares
-  function leerTitulares(nroConvocada) {
-    // Obtener el número de convocatoria ingresado por el usuario
-    const nro_convocada = Number(nroConvocada.value).toString().padStart(3, '0');
+  function leerTitulares() {
+    // Obtener los datos guardados de los jugadores titulares
+    var titularesGuardados = localStorage.getItem("titulares");
 
-    // Obtener los jugadores titulares
-    const jugadoresTitulares = JSON.parse(localStorage.getItem("titulares")) || [];
-
-    // Buscar la convocatoria especificada
-    const convocatoria = jugadoresTitulares.find((convocatoria) => Object.keys(convocatoria)[0] === nro_convocada);
-
-    // Si se encontró la convocatoria, devolver los jugadores titulares
-    if (convocatoria) {
-      return convocatoria[nroConvocada];
+    // Verificar si existen datos guardados en la memoria local
+    if (titularesGuardados) {
+      // Si hay datos guardados, convertirlos de nuevo a un objeto o arreglo
+      var titulares = JSON.parse(titularesGuardados);
+      // Hacer uso de los datos recuperados
+      console.log(titulares);
     } else {
-      return [];
+      // No se encontraron datos guardados en la memoria local
+      console.log("No hay datos guardados de jugadores titulares.");
     }
-  }
-
-  // Obtener referencias a los elementos de la página
-  const nroConvocadaInput = document.querySelector("#nro_convocada");
-  const leerTitularesButton = document.querySelector("#leerTitulares");
-  const titularesContainer = document.querySelector("#titulares");
-
-  // Agregar un controlador de eventos al botón "Leer titulares"
-  leerTitularesButton.addEventListener("click", () => {
-    // Obtener el número de convocatoria ingresado por el usuario
-    const nro_convocada = Number(nroConvocadaInput.value).toString().padStart(3, '0');
-
-    // Leer los jugadores titulares de la convocatoria especificada
-    const titulares = leerTitulares(nro_convocada);
-
-    // Mostrar los jugadores titulares en la página
-    let html = "<ul>";
-    for (const jugador of titulares) {
-      html += `<li>ID: ${jugador.id_player}, Nombre: ${jugador.nombre}, Apellido: ${jugador.apellido}, Posición: ${jugador.posicion}</li>`;
-    }
-    html += "</ul>";
-    titularesContainer.innerHTML = html;
-  });
+  }  
 </script>
 
 </body>

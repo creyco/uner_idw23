@@ -1,0 +1,394 @@
+body {
+    background-image: url('img/fondo-messi.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los botones */
+.boton {
+    padding: 10px 20px;
+    background-color:transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    margin-right: 10px;
+    flex: 1;
+    text-align: center;
+    font-family: 'Race Sport', sans-serif; 
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color:rgb(2, 77, 85);
+    color: white;
+  }
+
+/* Estilos para el contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10vh;
+    padding: 0 10%;
+    position: fixed;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+@font-face {
+    font-family: 'Race Sport';
+    src: url('Fuente/Race\ Sport.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Argentinafont';
+    src: url('Fuente/Argentina\ World\ Cup\ 2022\ Font.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Valorant';
+  src: url('Fuente/Valorant\ Font.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+#inicio {
+    background-image: url('img/fondo-messi.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 10vh;
+    width: 100%;
+    background-color: #333;
+    color: white!important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white; 
+    margin: 0 10px;
+    justify-content: flex-start;
+    text-align: center;
+  }    
+.iconos {
+    display: flex;
+    font-size: 35px;
+    column-gap: 25px;
+  }
+
+@keyframes shake{
+10% {
+transform: rotate(15deg);
+}
+20% {
+transform: rotate(-15deg);
+}
+30% {
+transform: rotate(15deg);
+}
+40% {
+transform: rotate(-15deg);
+}
+}
+  
+  footer p{
+    color:white;
+    font-size: 18px;
+    text-align: center;
+    
+
+  }
+  .linea {
+    position: fixed;
+    bottom: 85%;
+      left: 50%;
+      width: 80%; /* Ajusta el ancho de la línea según tus necesidades */
+      height: 2px;
+      background-color: white;
+      transform: translate(-50%, 50%);
+      z-index: 999;
+  }
+.parent {
+  position: relative; 
+  
+}
+
+.miNav{
+    background-color: #73acdf !important;    
+}
+
+
+.noticias{
+    text-align: justify;
+    height: 50px;
+    background-color: #0f2d87;
+    color: white;
+
+}
+
+
+.noticia{
+    border: 2px solid purple;
+    background-color: aquamarine;
+}
+
+card{
+    max-height: 50px;
+}
+
+.miImange{
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+
+.acciones{
+    text-align: right;
+}
+
+thead{
+    background-color: #73acdf;
+}
+
+.contenedor1{
+    height: 70px;
+    overflow-y: auto;
+    background-color: #4B0082;
+    color: white;    
+}
+
+.contenedor2{
+    height: 500px;
+    overflow-y: auto;
+    margin-top: 25px;
+}
+
+h1{
+    display: inline;
+    margin: 20px 20px;
+}
+
+button{
+    float: right;
+    margin: 20px 20px;
+}
+
+.miForm{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px 15px;
+    margin: 20px 20px;
+}
+
+.miImangeCarousel{
+    height: 50;
+    width: 1920;
+}
+
+.containerCarousel{
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.ejemplo2 .wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    /* background-color: green; */
+    background-image: url(../img/cancha.jpg);
+    background-repeat: no-repeat;
+    color: #444;
+    min-height: 380px;
+    max-height: 390px;
+}
+
+.ejemplo2 .box {
+    /* background-color: white; */
+    color: black;
+    /* border-radius: 50%; */
+    /* font-size: 150%; */
+    /* border: 2px solid black; */
+    /* background-color: aquamarine; */
+    /* display: grid; */
+    /* place-items: center; */
+}
+
+.ejemplo2 .a {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.jugador{
+    float: left;
+    width: 100px;
+    margin: -15px;
+}
+
+.imagenCancha{
+    max-height: 45px;
+    display: block;
+}
+
+.ejemplo2 .b {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.ejemplo2 .c {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.ejemplo2 .d {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+
+.ejemplo2 .e {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+.ejemplo2 .f {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+.ejemplo2 .g {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.ejemplo2 .h {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.ejemplo2 .i {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.ejemplo2 .j {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.ejemplo2 .k {
+    grid-column: 5;
+    grid-row: 4;
+    /* background-color: purple;
+    height: 50px; */
+}
+
+.sinViñetas{
+    list-style: none;
+}
+
+
+.miCard{
+    /* overflow: hidden; */
+    overflow-y: auto;
+    min-height: 450px;
+    max-height: 450px;
+}
+
+#noticias {
+    background: linear-gradient(to bottom, #1c2331, #007bff);
+    background-attachment: fixed;
+   }
+   button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(68, 111, 240);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  
+  button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    border: 4px solid rgb(70, 71, 72);
+   
+  }
+  
+  button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+   
+    
+  }
+  
+  button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgb(53, 53, 53);
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  button:active span::before {
+    background: #2751cd;
+  }   

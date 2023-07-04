@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Campo para ingresar el número de convocatoria -->
+<label for="nro_convocada">Número de convocatoria:</label>
+<input type="number" id="nroConvocada" />
+
+<!-- Botón para leer los jugadores titulares -->
+<button id="leerTitulares">Leer titulares</button>
+
+<!-- Contenedor para mostrar los jugadores titulares -->
+<div id="titulares"></div>
+
+<script>
+  // Función para leer los jugadores titulares
+  function leerTitulares(nroConvocada) {
+    // Obtener el número de convocatoria ingresado por el usuario
+    //const nro_convocada = Number(nroConvocada.value).toString().padStart(3, '0');
+
+    // Obtener los jugadores titulares
+    const jugadoresTitulares = JSON.parse(localStorage.getItem("titulares")) || [];
+    
+
+    // Buscar la convocatoria especificada
+    const convocatoria = jugadoresTitulares; //.find((convocatoria) => Object.keys(convocatoria)[0] === nro_convocada);
+
+    // Si se encontró la convocatoria, devolver los jugadores titulares
+    if (convocatoria) {
+      return convocatoria[nroConvocada];
+    } else {
+      return [];
+    }
+  }
+
+  // Obtener referencias a los elementos de la página
+  const nroConvocadaInput = document.querySelector("#nro_convocada");
+  const leerTitularesButton = document.querySelector("#leerTitulares");
+  const titularesContainer = document.querySelector("#titulares");
+
+  // Agregar un controlador de eventos al botón "Leer titulares"
+  leerTitularesButton.addEventListener("click", () => {
+    // Obtener el número de convocatoria ingresado por el usuario
+    const nro_convocada = Number(nroConvocadaInput.value).toString().padStart(3, '0');
+
+    // Leer los jugadores titulares de la convocatoria especificada
+    const titulares = leerTitulares(nro_convocada);
+
+    // Mostrar los jugadores titulares en la página
+    let html = "<ul>";
+    for (const jugador of titulares) {
+      html += `<li>ID: ${jugador.id_player}, Nombre: ${jugador.nombre}, Apellido: ${jugador.apellido}, Posición: ${jugador.posicion}</li>`;
+    }
+    html += "</ul>";
+    titularesContainer.innerHTML = html;
+  });
+</script>
+
+</body>
+</html>

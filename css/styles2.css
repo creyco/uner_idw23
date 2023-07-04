@@ -1,0 +1,307 @@
+/*slider footer* de institucional*/
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1c2331, #007bff);
+  position: relative;
+  height: 100%;
+  background-attachment: fixed;
+}
+.main-content {
+    flex: 1;}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #1c2331, #007bff48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed
+    
+  }
+  .title {
+    margin-top: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #aaa;
+  }
+  
+  .slider {
+    display: flex;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .slider:before {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    content: "";
+    width: 23.958%;
+    height: 110px;
+    background: linear-gradient(-90deg, hsla(0, 0%, 96.9%, 0), #f7f7f7);
+  }
+  
+  .slider:after {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 23.958%;
+    height: 110px;
+    background: linear-gradient(
+      90deg,
+      hsla(0, 0%, 96.9%, 0),
+      hsla(0, 0%, 96.9%, 0.99) 99%
+    );
+  }
+  
+  .slider .slide-track {
+    display: flex;
+    animation: scroll 35s linear infinite;
+    -webkit-animation: scroll 35s linear infinite;
+    width: calc(240px * 10);
+    scroll-behavior: smooth;
+  }
+  .slider .slide {
+    cursor: pointer;
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+    background-color: whi;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider .slide img {
+    height: auto;
+    width: 160px;
+    filter: brightness(0) saturate(100%);
+    opacity: 0.25;
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  
+    100% {
+      -webkit-transform: translateX(calc(-240px * 5));
+      transform: translateX(calc(-240px * 5));
+    }
+  }
+  
+  /* Define el estilo para el cuadro de texto dentro del contenedor */
+.cuadro-de-texto {
+    background-color: white;
+    padding: 40px;
+    font-size: 12px;
+    color: black;
+    
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #1E3A8A;
+    font-family: 'Anton',sans-serif;
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #000;
+    font-family: 'Anton',sans-serif;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #1E3A8A;
+    margin-bottom:0;
+    font-family: 'Anton',sans-serif;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 0;
+    font-family: "Roboto",Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    
+  }
+  /* Define el contenedor que cubre toda la página */
+.contenedor {
+    position: absolute;
+    top: 2350px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    
+  }
+/* iconos redes sociales  de institucional*/
+.red{
+    position: fixed;
+    top: 400px;
+    z-index: 5000;
+    left: 0;
+  }
+  
+  #facebook a {
+    background:#3b5998;
+    padding: 10px 25px;
+    color: #fff;
+    text-decoration: none;
+    width: 45px;
+    transition: all .4s ease;
+    border-top-right-radius: 10px;
+  }
+  #facebook a:hover{
+  background: #000;
+  padding: 10px 50px; 
+  }
+  #youtube a {
+    background:#bb0000;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    width: 55px;
+    transition: all .4s ease;
+  }
+  #youtube a:hover{
+  background: #000;
+  padding: 10px 50px; 
+  }
+  #twitter a {
+    background:#55acee;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    width: 55px;
+    transition: all .4s ease;
+  }
+  #twitter a:hover{
+  background: #000;
+  padding: 10px 50px; 
+  }
+  #correo a {
+    background:#d1d413;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+    width: 55px;
+    transition: all .4s ease;
+    border-bottom-right-radius: 10px;
+  }
+  #correo a:hover{
+  background: #000;
+  color: #fff;
+  padding: 10px 50px; 
+  }
+  .parent {
+    position: relative; 
+    
+  }
+    
+.linea {
+    position: absolute;
+    bottom: 0;
+    left: 250px;
+    right: 200px;
+    height: 1px;
+    background-color: white;
+  }
+/* Estilos para los botones */
+.boton {
+    padding: 10px 20px;
+    background-color:transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1;
+    text-align: center;
+    font-family: 'Race Sport', sans-serif; 
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color:rgb(2, 77, 85);
+    color: white;
+  }
+
+
+
+/* Estilos para el contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    padding: 0 15%;
+}
+
+@font-face {
+    font-family: 'Race Sport';
+    src: url('Fuente/Race\ Sport.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Argentinafont';
+    src: url('Fuente/Argentina\ World\ Cup\ 2022\ Font.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Valorant';
+  src: url('Fuente/Valorant\ Font.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.imgafa img {
+    width: 10%;
+    height: auto;
+    margin-top: -10%;
+  }
+
+.noticias-columna {
+    float: right;
+    width: 25%;
+    margin-right: 20px;
+   }
+   
+   .noticia {
+    margin-bottom: 20px;
+   }
+   
+   .noticia h4 {
+    font-size: 18px;
+    font-weight: negrita;
+   }
+   
+   .noticia p {
+    font-size: 14px;
+    margin-top: 5px;
+   }

@@ -1,0 +1,31 @@
+[{
+	"idconvocada": 1,
+	"idjugador": 1,
+	"posicion": "Arquero"
+},
+{
+	"idconvocada": 1,
+	"idjugador": 4,
+	"posicion": "Defensor"
+},
+{
+	"idconvocada": 1,
+	"idjugador": 5,
+	"posicion": "Defensor"
+},
+{
+	"idconvocada": 1,
+	"idjugador": 6,
+	"posicion": "Defensor"
+},
+{
+	"idconvocada": 1,
+	"idjugador": 7,
+	"posicion": "Defensor"
+},
+{
+	"idconvocada": 1,
+	"idjugador": 13,
+	"posicion": "Mediocampo"
+}
+]

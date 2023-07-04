@@ -1,0 +1,21 @@
+// Obtener los datos guardados de los jugadores titulares
+const titularesMemLocal = localStorage.getItem("titulares");
+
+// Verificar si existen datos guardados en la memoria local
+if (titularesMemLocal) {
+  // Si hay datos guardados, convertirlos de nuevo a un objeto o arreglo
+  const titulares = JSON.parse(titularesMemLocal);
+  // Hacer uso de los datos recuperados
+  console.log(titulares);
+} else {
+  // No se encontraron datos guardados en la memoria local
+  console.log("No hay datos guardados de jugadores titulares.");
+}
+
+
+
+    // Si los datos ya están en la memoria local, mostrarlos en la tabla
+    const titulares = JSON.parse(localStorage.getItem('titulares'));
+    initialData = localStorage.getItem('titulares');
+    displayJugadores(jugadores);
+    

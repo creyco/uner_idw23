@@ -1,0 +1,19 @@
+Para ver los datos almacenados en la memoria local con el Inspector Web de los navegadores, puedes seguir estos pasos:
+
+1. Abre el sitio web que contiene el código JavaScript que guarda los datos en la memoria local en tu navegador.
+
+2. Haz clic derecho en cualquier parte de la página y selecciona "Inspeccionar" o "Inspect" en el menú contextual. Esto abrirá el Inspector Web del navegador.
+
+3. En el Inspector Web, busca la pestaña "Application" (Aplicación) en la parte superior de la ventana. Dependiendo del navegador, es posible que debas hacer clic en el botón que representa una flecha o un triángulo para expandir el panel de herramientas del Inspector Web y ver la pestaña "Application".
+
+4. Dentro de la pestaña "Application", busca y haz clic en la opción "Storage" (Almacenamiento) en el panel izquierdo. Aquí verás diferentes tipos de almacenamiento, incluido el almacenamiento local (Local Storage) y el almacenamiento de sesión (Session Storage).
+
+5. Haz clic en "Local Storage" para ver los datos almacenados en la memoria local.
+
+6. En el panel derecho, verás una lista de los datos almacenados en la memoria local para el dominio del sitio web actual. Los datos se mostrarán en forma de pares clave-valor.
+
+7. Si tienes datos guardados bajo una clave específica, puedes hacer clic en la clave para ver su valor.
+
+A través del Inspector Web, podrás examinar los datos almacenados en la memoria local y verificar que los datos que has guardado mediante `localStorage.setItem()` estén presentes. También puedes realizar cambios o eliminar los datos si es necesario.
+
+Ten en cuenta que el aspecto y la ubicación de las opciones en el Inspector Web pueden variar ligeramente dependiendo del navegador que estés utilizando.
