@@ -211,6 +211,8 @@ document.querySelector('#exit-button').addEventListener('click', () => {
     
     // Redirigir a la página "crudconvocatorias.html"
     window.location.href = "crudconvocatorias.html";
+    
+
   }
 });
 

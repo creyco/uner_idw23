@@ -226,9 +226,7 @@ guardarButton.addEventListener("click", () => {
 
     // Cerrar la ventana modal
     modalContainer.remove();
-
-    
-
+   
     // Redireccionar al index.html
     window.location.href = "convocatorias.html";
 
