@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <input type="button" value="Borrar Memoria Local" onclick="borraStorage();">
+  
+    <script>        
+            
+        function borraStorage() {
+            console.log('Botón de Borrar memoria Temporal');
+            if (confirm('¿Estás seguro de que quieres Borrar Memoria Temporal?')) {
+                borraStorage();   
+                //localStorage.setItem('bgcolor', 'red');
+                //localStorage.setItem('font', 'Helvetica');
+                //localStorage.setItem('image', 'myCat.png');
+                localStorage.clear();     
+                return;
+            }
+            return;
+        }       
+    </script>
+</body>
+</html>

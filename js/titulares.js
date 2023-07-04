@@ -26,8 +26,11 @@ fetch('data/formacion.json')
 fetch("data/jugadores.json")
   .then((response) => response.json())
   .then((data) => {
+    // Agregar el campo "convocado" a cada jugador
+    data.forEach(jugador => {
+      jugador.titular = false; // Puedes asignar el valor predeterminado que desees
+      });
     localStorage.setItem("players", JSON.stringify(data));
-
     // Mostrar jugadores
     showPlayers();
   });

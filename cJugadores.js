@@ -34,7 +34,7 @@ let jugadoresFiltrados = [];
 let cantidadConvocados = 0;
 let maxConvocados = 26;
 
-//if (localStorage.getItem('jugadores') === null) {
+  if (localStorage.getItem('jugadores') === null) {
   fetch('data/jugadores.json')
     .then(response => response.json())
     .then(data => {
@@ -48,12 +48,12 @@ let maxConvocados = 26;
       jugadores = data; // Asignar los datos a la variable jugadores
       displayJugadores(data);
     });
-  /*} else {
+  } else {
   // Si los datos ya están en la memoria local, mostrarlos en la tabla
   const jugadores = JSON.parse(localStorage.getItem('jugadores'));
   initialData = localStorage.getItem('jugadores');
   displayJugadores(jugadores);
-  }*/
+  }
 //***********************************************************************
 
 // Función para filtrar los jugadores por posición
