@@ -38,19 +38,36 @@ function displayconvocatorias(convocatorias) {
   // Calculate the next available ID
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
   const nextId = Math.max(...convocatorias.map(convocatoria => convocatoria.id)) + 1;
-  // Create a modal window to enter the new convocatoria's data
+  
   const modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.innerHTML = `
-    <div class="modal-content">
+  modal.classList.add('modal');  
+  modal.innerHTML = `    
+    <div class="modal-content">        
       <span class="close-button">×</span>
-      <form class="form_input">
-        <label>ID: <input type="number" name="id" value="${nextId}" readonly /></label><br/>
-        <label>Fecha: <input type="date" name="fecha" /></label><br/>
-        <label>Rival: <input type="text" name="rival" /></label><br/>
-        <label>Capitan: <input type="text" name="capitan" /></label><br/>        
-        <button type="submit">Guardar cambios</button>
-      </form>
+      <div class="modal-body">
+      <h3 class="modal-header">Alta Convocatoria</h3>      
+        <form class="form_input">
+          <div class="form-row">
+            <label>ID:</label> 
+            <input type="number" name="id" value="${nextId}" readonly /><br>
+          </div>
+          <div class="form-row">
+            <label>Fecha:</label> 
+            <input type="date" name="fecha" /><br>
+          </div>
+          <div class="form-row">
+            <label>Rival:</label> 
+            <input type="text" name="rival" /><br>
+          </div>
+          <div class="form-row">
+          <label>Capitan:</label> 
+          <input type="text" name="capitan" /><br>        
+          </div>
+          <div class="form-row">
+          <button type="submit">Guardar cambios</button>
+          </div>
+        </form>
+      </div>  
     </div>
   `;
   modal.querySelector('form').addEventListener('submit', event => {
@@ -60,7 +77,7 @@ function displayconvocatorias(convocatorias) {
     addconvocatoria(newconvocatoria)
   });
   modal.querySelector('.close-button').addEventListener('click', () => closeModal(modal));
-  document.body.appendChild(modal);
+  document.body.appendChild(modal);  
 }
 
  // Función para agregar un nueva convocatoria
@@ -74,6 +91,7 @@ function displayconvocatorias(convocatorias) {
 
  // Agregar un controlador de eventos al botón "Crear convocatoria"
  document.querySelector('#create-button').addEventListener('click', createConvocatoria);
+ //document.querySelector('#edit-button').addEventListener('click', editconvocatoria);
 
  // Función para editar un jugador al hacer clic en su imagen
  function editconvocatoria(convocatoria) {
@@ -83,16 +101,29 @@ function displayconvocatorias(convocatorias) {
   modal.innerHTML = `
     <div class="modal-content">
       <span class="close-button">×</span>
-      <div class="convocatoria-info">                
-        
+      <div class="modal-body">
+        <h3 class="modal-header">Edita Convocatoria</h3>                          
         <form class="form_input">
-          <label>ID: <input type="number" name="id" value="${convocatoria.id}" readonly /></label><br/>
-          <label>Fecha: <input type="date" name="fecha" value="${convocatoria.fecha}" pattern="\d{2}-\d{2}-\d{4}" /></label><br/>
-          <label>Rival: <input type="text" name="rival" value="${convocatoria.rival}" /></label><br/>
-          <label>Capitan: <input type="text" name="capitan" value="${convocatoria.capitan}" /></label><br/>          
-          <button type="submit">Guardar cambios</button>
-          <button type="button" id="delete-button">Eliminar Convocatoria</button>
+          <div class="form-row">          
+          <label>ID:</label> <input type="number" name="id" value="${convocatoria.id}" readonly /><br>
+          </div>          
+          <div class="form-row">          
+          <label>Fecha:</label> <input type="date" name="fecha" value="${convocatoria.fecha}" pattern="\d{2}-\d{2}-\d{4}" /><br>
+          </div>          
+          <div class="form-row">          
+          <label>Rival:</label> <input type="text" name="rival" value="${convocatoria.rival}" /><br>
+          </div>          
+          <div class="form-row">          
+          <label>Capitan:</label> <input type="text" name="capitan" value="${convocatoria.capitan}" /><br>          
+          </div>                    
+          <div class="form-row">          
+            <button type="submit">Guardar cambios</button>
+          </div>          
+          <div class="form-row">          
+            <button type="button" id="delete-button">Eliminar Convocatoria</button>
+          </div>          
         </form>
+            
       </div>  
     </div>
   `;
@@ -147,6 +178,7 @@ function saveChanges() {
   link.click();
   URL.revokeObjectURL(url);
 }
+
 
 // Agregar evento de clic al botón de salida
 document.querySelector('#exit-button').addEventListener('click', () => {

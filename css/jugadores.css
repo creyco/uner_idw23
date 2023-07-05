@@ -177,8 +177,15 @@ tr:hover {background-color: rgba(200, 200, 200, 0.368);}
   background-color:  rgba(24, 158, 173, 0.4);
 }
 
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .modal-content {
-  background-color: #fefefe;
+  background-color: #050120;;
   margin: 10% auto;
   padding: 30px;
   border: 1px solid #888;
@@ -191,8 +198,9 @@ tr:hover {background-color: rgba(200, 200, 200, 0.368);}
 
 .modal-header {
   padding: 20px;
-  background-color: #5cb85c;
+  background-color: blueviolet;
   color: white;
+  border-radius: 15px;
 }
 
 .modal-content .jugador-image{
@@ -210,11 +218,12 @@ tr:hover {background-color: rgba(200, 200, 200, 0.368);}
 
 .close-button {
   position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 28px;
+  right: 10px;
+  top: 10px;  
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  color: white;
 }
 
 .label{
@@ -262,6 +271,7 @@ tr:hover {background-color: rgba(200, 200, 200, 0.368);}
  .form-row label {
   width: 120px;
   margin-right: 10px;
+  color: white;
 }
  .form-row input,
 .form-row select {

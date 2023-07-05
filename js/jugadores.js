@@ -47,6 +47,7 @@ apellidoInput.addEventListener('input', () => {
   filtrarJugadores(posicionSeleccionada, apellidoIngresado);
 });
 
+document.querySelector('#create-button').addEventListener('click', createJugador);
 
  // Función para mostrar los jugadores en la tabla
  function displayJugadores(jugadores) {
@@ -82,54 +83,57 @@ apellidoInput.addEventListener('input', () => {
   modal.classList.add('modal');
   modal.innerHTML = `
   <div class="modal-content">
-  <span class="close-button">×</span>
-  <form class="form_input">
-    <div class="form-row">
-      <label>ID:</label>
-      <input type="number" name="id" value="${nextId}" readonly />
+    <span class="close-button">×</span>
+    <div class="modal-body">
+      <h3 class="modal-header">Alta Jugador</h3>      
+      <form class="form_input">
+        <div class="form-row">
+          <label>ID:</label>
+          <input type="number" name="id" value="${nextId}" readonly />
+        </div>
+        <div class="form-row">
+          <label>DNI:</label>
+          <input type="text" name="dni" maxlength="8" />
+        </div>
+        <div class="form-row">
+          <label>Nombre:</label>
+          <input type="text" name="nombre" id="nombreInput" />
+        </div>
+        <div class="form-row">
+          <label>Apellido:</label>
+          <input type="text" name="apellido" id="apellidoInput" />
+        </div>
+        <div class="form-row">
+          <label>Posición:</label>
+          <select name="posicion">
+            <option value="Arquero">Arquero</option>
+            <option value="Defensa">Defensa</option>
+            <option value="Mediocampo">Mediocampo</option>
+            <option value="Delantero">Delantero</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Dorsal:</label>
+          <input type="number" name="dorsal" min="1" max="99" />
+        </div>
+        <div class="form-row">
+          <label>Pie hábil:</label>
+          <label><input type="radio" name="piehabil" value="Izquierdo" /> Izquierdo</label>
+          <label><input type="radio" name="piehabil" value="Derecho" /> Derecho</label>
+        </div>
+        <div class="form-row">
+          <label>Apodo:</label>
+          <input type="text" name="apodo" />
+        </div>
+        <div class="form-row">
+          <label>Imagen:</label>
+          <input type="text" name="imagen" />
+        </div>
+        <div class="form-row">
+          <button type="submit">Guardar cambios</button>
+        </div>
+      </form>
     </div>
-    <div class="form-row">
-      <label>DNI:</label>
-      <input type="text" name="dni" maxlength="8" />
-    </div>
-    <div class="form-row">
-      <label>Nombre:</label>
-      <input type="text" name="nombre" id="nombreInput" />
-    </div>
-    <div class="form-row">
-      <label>Apellido:</label>
-      <input type="text" name="apellido" id="apellidoInput" />
-    </div>
-    <div class="form-row">
-      <label>Posición:</label>
-      <select name="posicion">
-        <option value="Arquero">Arquero</option>
-        <option value="Defensa">Defensa</option>
-        <option value="Mediocampo">Mediocampo</option>
-        <option value="Delantero">Delantero</option>
-      </select>
-    </div>
-    <div class="form-row">
-      <label>Dorsal:</label>
-      <input type="number" name="dorsal" min="1" max="99" />
-    </div>
-    <div class="form-row">
-      <label>Pie hábil:</label>
-      <label><input type="radio" name="piehabil" value="Izquierdo" /> Izquierdo</label>
-      <label><input type="radio" name="piehabil" value="Derecho" /> Derecho</label>
-    </div>
-    <div class="form-row">
-      <label>Apodo:</label>
-      <input type="text" name="apodo" />
-    </div>
-    <div class="form-row">
-      <label>Imagen:</label>
-      <input type="text" name="imagen" />
-    </div>
-    <div class="form-row">
-      <button type="submit">Guardar cambios</button>
-    </div>
-  </form>
 </div>
   `;
 
@@ -177,60 +181,63 @@ apellidoInput.addEventListener('input', () => {
   modal.classList.add('modal');
   modal.innerHTML = `
     <div class="modal-content">
-      <span class="close-button">×</span>
+      <span class="close-button">×</span>            
       <div class="jugador-info">                
-        <img class="jugador-image" src="img/${jugador.imagen}" alt="" />        
+      <img class="jugador-image" src="img/${jugador.imagen}" alt="" />        
       </div>        
-      <form class="form_input">
-        <div class="form-row">
-          <label>ID:</label> 
-          <input type="number" name="id" value="${jugador.id}" readonly />
-        </div>  
-        <div class="form-row">  
-          <label>DNI:</label> 
-          <input type="text" name="dni" value="${jugador.dni}" maxlength="<EUGPSCoordinates>8" />
-        </div>           
-        <div class="form-row">  
-          <label>Nombre:</label>   
-          <input type="text" name="nombre"   id="nombreInput" value="${jugador.nombre}" />
-        </div>   
-        <div class="form-row">    
-          <label>Apellido:</label>
-          <input type="text" name="apellido" id="apellidoInput" value="${jugador.apellido}" />
-        </div>
-        
-        <div class="form-row">  
-         <label>Posición:</label><br/>
-          <select name="posicion">
-            <option value="Arquero" ${jugador.posicion === 'Arquero' ? 'selected' : ''}>Arquero</option>
-            <option value="Defensa" ${jugador.posicion === 'Defensa' ? 'selected' : ''}>Defensa</option>
-            <option value="Mediocampo" ${jugador.posicion === 'Mediocampo' ? 'selected' : ''}>Mediocampo</option>
-            <option value="Delantero" ${jugador.posicion === 'Delantero' ? 'selected' : ''}>Delantero</option>
-          </select>
-        </div> 
-        <div class="form-row">   
-            <label>Dorsal:</label> 
-            <input type="number" name="dorsal" min="1" max="99" value="${jugador.dorsal}" />
-        </div> 
+      <div class="modal-body">
+        <h3 class="modal-header">Edita Jugador</h3>  
+        <form class="form_input">
+          <div class="form-row">
+            <label>ID:</label> 
+            <input type="number" name="id" value="${jugador.id}" readonly />
+          </div>  
+          <div class="form-row">  
+            <label>DNI:</label> 
+            <input type="text" name="dni" value="${jugador.dni}" maxlength="<EUGPSCoordinates>8" />
+          </div>           
+          <div class="form-row">  
+            <label>Nombre:</label>   
+            <input type="text" name="nombre"   id="nombreInput" value="${jugador.nombre}" />
+          </div>   
+          <div class="form-row">    
+            <label>Apellido:</label>
+            <input type="text" name="apellido" id="apellidoInput" value="${jugador.apellido}" />
+          </div>
+          
+          <div class="form-row">  
+          <label>Posición:</label><br/>
+            <select name="posicion">
+              <option value="Arquero" ${jugador.posicion === 'Arquero' ? 'selected' : ''}>Arquero</option>
+              <option value="Defensa" ${jugador.posicion === 'Defensa' ? 'selected' : ''}>Defensa</option>
+              <option value="Mediocampo" ${jugador.posicion === 'Mediocampo' ? 'selected' : ''}>Mediocampo</option>
+              <option value="Delantero" ${jugador.posicion === 'Delantero' ? 'selected' : ''}>Delantero</option>
+            </select>
+          </div> 
+          <div class="form-row">   
+              <label>Dorsal:</label> 
+              <input type="number" name="dorsal" min="1" max="99" value="${jugador.dorsal}" />
+          </div> 
 
-        <div class="form-row">   
-         <label>Pie hábil:</label><br/>
-         <label><input type="radio" name="piehabil" value="Izquierdo" ${jugador.piehabil === 'Izquierdo' ? 'checked' : ''} /> Izquierdo</label>
-         <label><input type="radio" name="piehabil" value="Derecho" ${jugador.piehabil === 'Derecho' ? 'checked' : ''} /> Derecho</label>
-        </div> 
-        <div class="form-row">  
-            <label>Apodo:</label>
-            <input type="text" name="apodo" value="${jugador.apodo}" /></label><br/>        
-        </div> 
-        <div class="form-row">   
-            <label>Imagen:</label>
-            <input type="text" name="imagen" value="${jugador.imagen}" />
-        </div> 
-        <div class="form-row">   
-            <button type="submit">Guardar cambios</button>
-            <button type="button" id="delete-button">Eliminar jugador</button>
-        </div> 
-        </form>
+          <div class="form-row">   
+          <label>Pie hábil:</label><br/>
+          <label><input type="radio" name="piehabil" value="Izquierdo" ${jugador.piehabil === 'Izquierdo' ? 'checked' : ''} /> Izquierdo</label>
+          <label><input type="radio" name="piehabil" value="Derecho" ${jugador.piehabil === 'Derecho' ? 'checked' : ''} /> Derecho</label>
+          </div> 
+          <div class="form-row">  
+              <label>Apodo:</label>
+              <input type="text" name="apodo" value="${jugador.apodo}" /></label><br/>        
+          </div> 
+          <div class="form-row">   
+              <label>Imagen:</label>
+              <input type="text" name="imagen" value="${jugador.imagen}" />
+          </div> 
+          <div class="form-row">   
+              <button type="submit">Guardar cambios</button>
+              <button type="button" id="delete-button">Eliminar jugador</button>
+          </div> 
+          </form>
+        </div>  
       </div>  
     </div>
   `;
