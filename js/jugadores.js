@@ -1,19 +1,52 @@
-// Leer el archivo data/jugadores.json usando fetch y almacenarlo en la memoria local si no existe
+ //Borra memoria local
+localStorage.clear();    
 let initialData = [] 
+
+// Leer el archivo data/jugadores.json usando fetch y almacenarlo en la memoria local si no existe
 if (localStorage.getItem('jugadores') === null) {
   fetch('data/jugadores.json')
     .then(response => response.json())
     .then(data => {
       localStorage.setItem('jugadores', JSON.stringify(data));
-      initialData = localStorage.getItem('jugadores');
+      initialData = data; // No es necesario obtener los datos nuevamente de localStorage
       displayJugadores(data);
     });
   } else {
   // Si los datos ya están en la memoria local, mostrarlos en la tabla
   const jugadores = JSON.parse(localStorage.getItem('jugadores'));
-  initialData = localStorage.getItem('jugadores');
+  initialData = jugadores; // No es necesario obtener los datos nuevamente de localStorage
   displayJugadores(jugadores);
   }
+
+// Obtener referencia a los elementos select de posición y apellido
+const posicionSelect = document.getElementById('posicion');
+const apellidoInput = document.getElementById('apellido');
+
+
+// Función para filtrar los jugadores por posición y apellido
+function filtrarJugadores(posicion, apellido) {
+  const jugadoresFiltrados = initialData.filter(jugador => {
+    const posicionMatch = posicion.toLowerCase() === 'todos' || jugador.posicion.toLowerCase() === posicion.toLowerCase();
+    const apellidoMatch = apellido.toLowerCase() === '' || jugador.apellido.toLowerCase().startsWith(apellido.toLowerCase());
+    return posicionMatch && apellidoMatch;
+  });
+  displayJugadores(jugadoresFiltrados);
+}
+
+
+// Evento de escucha para el cambio de posición y apellido
+posicionSelect.addEventListener('change', () => {
+  const posicionSeleccionada = posicionSelect.value;
+  const apellidoIngresado = apellidoInput.value;
+  filtrarJugadores(posicionSeleccionada, apellidoIngresado);
+});
+
+apellidoInput.addEventListener('input', () => {
+  const posicionSeleccionada = posicionSelect.value;
+  const apellidoIngresado = apellidoInput.value;
+  filtrarJugadores(posicionSeleccionada, apellidoIngresado);
+});
+
 
  // Función para mostrar los jugadores en la tabla
  function displayJugadores(jugadores) {

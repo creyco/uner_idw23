@@ -30,7 +30,6 @@ const jugadoresTableBody = document.getElementById('jugadores-table-body');
 let initialData = []
 let jugadores = []; // Mover la declaración de la variable jugadores aquí
 let convocados = []; // Mover la declaración de la variable jugadores aquí
-let jugadoresFiltrados = [];
 let cantidadConvocados = 0;
 let jugadoresConvocados = [];
 let convocadosCounter = 0;

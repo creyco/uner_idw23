@@ -23,13 +23,21 @@
    
 
     <div>
-        <div class="container">           
+        <div class="container">
+            <select class="form-select" id="posicion">
+              <option value="todos">Todos</option>
+              <option value="arquero">Arquero</option>
+              <option value="defensa">Defensa</option>
+              <option value="mediocampo">Mediocampo</option>
+              <option value="delantero">Delantero</option>
+            </select>
+            <input type="text" id="apellido" placeholder="Filtrar por Apellido">
             <nav>
-                <button id="create-button">Crear jugador</button>
-                <button id="exit-button">Salir y guardar cambios</button>
-                <button id="cancel-button">Salir sin guardar cambios</button>
+              <button id="create-button">Crear jugador</button>
+              <button id="exit-button">Salir y guardar cambios</button>
+              <button id="cancel-button">Salir sin guardar cambios</button>
             </nav>
-        </div>
+          </div>          
     </div>
    <br>
    

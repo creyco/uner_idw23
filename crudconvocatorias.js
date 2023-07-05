@@ -144,8 +144,8 @@ function saveChanges() {
 document.querySelector('#exit-button').addEventListener('click', () => {
   console.log('Botón de salida y guardar cambios presionado');
   if (confirm('¿Estás seguro de que quieres salir y guardar los cambios?')) {
-    saveChanges();
-    window.close();
+    saveChanges();    
+    window.location.href = "index.html";
   }
 });
 
@@ -153,7 +153,7 @@ document.querySelector('#exit-button').addEventListener('click', () => {
 document.querySelector('#cancel-button').addEventListener('click', () => {
   console.log('Botón de salir sin guardar cambios presionado');
   if (confirm('¿Estás seguro de que quieres salir sin guardar los cambios?')) {
-    window.close();
+    window.location.href = "index.html";
   }
 });
 
