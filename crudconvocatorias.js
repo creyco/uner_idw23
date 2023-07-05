@@ -1,10 +1,18 @@
+let initialData = [] 
 // Leer el archivo convocatorias.json usando fetch y almacenarlo en la memoria local
-fetch('data/convocatorias.json')
-  .then(response => response.json())
-  .then(data => {
-    localStorage.setItem('convocatorias', JSON.stringify(data));
-    displayconvocatorias(data);
-  });
+if (localStorage.getItem('convocatorias') === null) {
+  fetch('data/convocatorias.json')
+    .then(response => response.json())
+    .then(data => {
+      localStorage.setItem('convocatorias', JSON.stringify(data));
+      displayconvocatorias(data);
+    });
+  } else {
+    // Si los datos ya están en la memoria local, mostrarlos en la tabla
+    const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
+    initialData = convocatorias; // No es necesario obtener los datos nuevamente de localStorage
+    displayconvocatorias(convocatorias);
+    }
 
 // Función para mostrar las convocatorias de la tabla
 function displayconvocatorias(convocatorias) {
