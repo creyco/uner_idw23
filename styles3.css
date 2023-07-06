@@ -61,7 +61,28 @@ body {
   font-style: normal;
 }
 
+/* Add responsive styles here */
+@media screen and (max-width: 768px) {
+    .botones-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding: 20px;
+    }
+    .boton {
+        margin-bottom: 10px;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .miImange {
+        height: 60px;
+        width: 60px;
+    }
+    .wrapper {
+        grid-template-columns: repeat(2, 100px);
+    }
+}
 
 #inicio {
     background-image: url('img/fondo-messi.png');

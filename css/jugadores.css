@@ -18,6 +18,10 @@ header {
   display: flex;
   align-items: center;
 }
+.container p {
+  background-color:rgb(2, 77, 85); 
+  color: white;
+  }
 
 .button-container {
   display: flex;

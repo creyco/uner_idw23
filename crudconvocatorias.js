@@ -57,11 +57,11 @@ function displayconvocatorias(convocatorias) {
           </div>
           <div class="form-row">
             <label>Rival:</label> 
-            <input type="text" name="rival" /><br>
+            <input type="text" name="rival" id="rivalInput" /><br>
           </div>
           <div class="form-row">
           <label>Capitan:</label> 
-          <input type="text" name="capitan" /><br>        
+          <input type="text" name="capitan" id="capitanInput" /><br>
           </div>
           <div class="form-row">
           <button type="submit">Guardar cambios</button>
@@ -70,6 +70,20 @@ function displayconvocatorias(convocatorias) {
       </div>  
     </div>
   `;
+
+  // Obtener los elementos de los campos de nombre y capitan
+  const rivalInput = modal.querySelector('#rivalInput');
+  const capitanInput = modal.querySelector('#capitanInput');
+
+  // Agregar el evento input a los campos de nombre y capitan
+  rivalInput.addEventListener('input', function() {
+    this.value = this.value.toUpperCase();
+  });
+  // Agregar el evento input a los campos de nombre y capitan
+  capitanInput.addEventListener('input', function() {
+    this.value = this.value.toUpperCase();
+  });
+
   modal.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -111,10 +125,10 @@ function displayconvocatorias(convocatorias) {
           <label>Fecha:</label> <input type="date" name="fecha" value="${convocatoria.fecha}" pattern="\d{2}-\d{2}-\d{4}" /><br>
           </div>          
           <div class="form-row">          
-          <label>Rival:</label> <input type="text" name="rival" value="${convocatoria.rival}" /><br>
+          <label>Rival:</label> <input type="text" name="rival" id="rivalInput" value="${convocatoria.rival}" /><br>
           </div>          
           <div class="form-row">          
-          <label>Capitan:</label> <input type="text" name="capitan" value="${convocatoria.capitan}" /><br>          
+          <label>Capitan:</label> <input type="text" name="capitan" id="capitanInput" value="${convocatoria.capitan}" /><br>          
           </div>                    
           <div class="form-row">          
             <button type="submit">Guardar cambios</button>
@@ -127,6 +141,19 @@ function displayconvocatorias(convocatorias) {
       </div>  
     </div>
   `;
+  // Obtener los elementos de los campos de nombre y capitan
+  const rivalInput = modal.querySelector('#rivalInput');
+  const capitanInput = modal.querySelector('#capitanInput');
+
+  // Agregar el evento input a los campos de nombre y capitan
+  rivalInput.addEventListener('input', function() {
+    this.value = this.value.toUpperCase();
+  });
+  // Agregar el evento input a los campos de nombre y capitan
+  capitanInput.addEventListener('input', function() {
+    this.value = this.value.toUpperCase();
+  });
+
   modal.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(event.target);

@@ -30,7 +30,7 @@ const jugadoresTableBody = document.getElementById('jugadores-table-body');
 let initialData = []
 let jugadores = []; // Mover la declaración de la variable jugadores aquí
 let convocados = []; // Mover la declaración de la variable jugadores aquí
-let nroConvocados = 0;
+let cantidadConvocados = 0;
 let jugadoresConvocados = [];
 let convocadosCounter = 0;
 let maxConvocados = 26;
@@ -93,7 +93,6 @@ function verificarConvocados() {
       const convocado = convocadosData.find(convocado => convocado.idjugador === jugador.id);
       jugador.convocado = convocado ? true : false;
       jugador.titular = convocado ? convocado.titular : false;
-      nroConvocados += jugador.convocado ? 1 : 0;
     });
   }
 }
@@ -101,8 +100,6 @@ function verificarConvocados() {
   
   leeConvocados()
   leeJugadores()
-  const nroConvocadosContainer = document.querySelector('#nroConvocados');
-  nroConvocadosContainer.textContent = nroConvocados;
   displayJugadores(jugadores)
 //***********************************************************************
 
@@ -126,6 +123,7 @@ posicionSelect.addEventListener('change', () => {
 // Función para mostrar los jugadores en la tabla
 function displayJugadores(jugadores) {
   console.log(jugadores);
+
   jugadoresTableBody.innerHTML = '';
   jugadores.forEach(jugador => {
     const row = document.createElement('tr');
@@ -139,34 +137,46 @@ function displayJugadores(jugadores) {
       <td>${jugador.piehabil}</td>
       <td>${jugador.apodo}</td>
       <td><img src="img/${jugador.imagen}" alt="${jugador.nombre} ${jugador.apellido}" /></td>
-      <!-- <td><input type="checkbox" ${jugador.convocado ? 'checked' : ''} onchange="updateConvocado(${jugador.id}, this.checked)"></td> -->
-      <td><input type="checkbox" value="${jugador.convocado}" /></td>
-      
+      <td><input type="checkbox" ${jugador.convocado ? 'checked' : ''} onchange="updateConvocado(${jugador.id}, this.checked)"></td>
       <td>${jugador.titular}</td>
     `;
     jugadoresTableBody.appendChild(row);
-
-    const checkbox = row.querySelector('input[type="checkbox"]');
-    checkbox.checked = jugador.convocado;
-    checkbox.addEventListener('change', () => {
-      updateConvocado(jugadores, jugador.id, checkbox.checked);
-      nroConvocadosContainer.textContent = nroConvocados;
   });
     // Mostrar la cantidad de jugadores convocados hasta el momento
-    // const cantidadConvocados = jugadores.filter(jugador => jugador.convocado === true).length;
-    // convocadosCounter.textContent = cantidadConvocados;
-  
-});
+    const cantidadConvocados = jugadores.filter(jugador => jugador.convocado === true).length;
+    convocadosCounter.textContent = cantidadConvocados;
 }
- 
-// Actualiza la variable convocado en la tabla jugador
-  function updateConvocado(jugadores, id, convocado) {
-    const jugador = jugadores.find(jugador => jugador.id === id);
-    if (jugador) {
-      jugador.convocado = convocado;
-      nroConvocados += convocado ? 1 : -1;
+
+function updateConvocado(id, convocado) {
+  // Obtener los jugadores del almacenamiento local
+  let jugadores = JSON.parse(localStorage.getItem('jugadoresConvocados'));
+
+  // Buscar el jugador con el ID especificado
+  const jugador = jugadores.find(jugador => jugador.id === id);
+
+  // Si se encontró el jugador, actualizar su estado de convocatoria
+  if (jugador) {
+    // Verificar si la suma de convocados supera el límite
+    let cantidadConvocados = jugadores.filter(jugador => jugador.convocado).length;
+    
+
+    if (convocado && cantidadConvocados >= maxConvocados) {
+      // Mostrar mensaje de error
+      alert(`No se puede convocar a más de ${maxConvocados} jugadores.`);
+      return;
     }
+
+    // Actualizar el estado de convocatoria del jugador
+    jugador.convocado = convocado;
+
+    // Actualizar la cantidad de jugadores convocados
+    cantidadConvocados = jugadores.filter(jugador => jugador.convocado).length;
+    convocadosCounter.textContent = cantidadConvocados;
+
+    // Guardar los datos actualizados en el almacenamiento local
+    localStorage.setItem('jugadoresConvocados', JSON.stringify(jugadores));
   }
+}
 
 // Agregar evento de clic al botón de salida
 document.querySelector('#exit-button').addEventListener('click', () => {
