@@ -18,10 +18,7 @@ header {
   display: flex;
   align-items: center;
 }
-.container p {
-  background-color:rgb(2, 77, 85); 
-  color: white;
-  }
+
 
 .button-container {
   display: flex;
@@ -43,8 +40,13 @@ button{
   box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
   transition: all 250ms;
   overflow: hidden;
-
 }
+
+.button-style{  
+  display: flex;
+  gap: 10px;
+}
+
 
 button:hover{
   background-color:rgb(2, 77, 85);
