@@ -23,7 +23,8 @@ const id_convocada = convocatoria.id ; // Número de convocatoria
 
 //***************************************************************/
 // Obtener referencias a los elementos relevantes del DOM
-//const jugadoresTableBody = document.getElementById('jugadores-table-body');
+const posicionSelect = document.getElementById('posicion');
+const jugadoresTableBody = document.getElementById('jugadores-table-body');
 
 // localStorage.clear(); // Borra la memoria local
 let initialData = []
@@ -61,8 +62,7 @@ function leeJugadores() {
       jugadores.forEach(jugador => {
         jugador.convocado = false;
         jugador.titular = false;
-      });   
-      initialData = jugadores; // No es necesario obtener los datos nuevamente de localStorage   
+      });      
       verificarConvocados();
     } else {    // Utilizar los datos almacenados en jugadores
         fetch('data/jugadores.json')
@@ -76,7 +76,7 @@ function leeJugadores() {
 
           localStorage.setItem('jugadores', JSON.stringify(data));
           jugadores = data; // Asignar los datos a la variable jugadores
-          initialData = jugadores; // No es necesario obtener los datos nuevamente de localStorage
+
           verificarConvocados();
           // Utilizar los datos de la tabla JSON en jugadores
         });
@@ -98,6 +98,7 @@ function verificarConvocados() {
   }
 }
 //***********************************************************************
+  
   leeConvocados()
   leeJugadores()
   const nroConvocadosContainer = document.querySelector('#nroConvocados');
@@ -105,39 +106,26 @@ function verificarConvocados() {
   displayJugadores(jugadores)
 //***********************************************************************
 
-// Obtener referencia a los elementos select de posición y apellido
-const posicionSelect = document.getElementById('posicion');
-const apellidoInput = document.getElementById('apellido');
-
-
-// Función para filtrar los jugadores por posición y apellido
-function filtrarJugadores(posicion, apellido) {
-  const jugadoresFiltrados = initialData.filter(jugador => {
-    const posicionMatch = posicion.toLowerCase() === 'todos' || jugador.posicion.toLowerCase() === posicion.toLowerCase();
-    const apellidoMatch = apellido.toLowerCase() === '' || jugador.apellido.toLowerCase().startsWith(apellido.toLowerCase());
-    return posicionMatch && apellidoMatch;
-  });
+// Función para filtrar los jugadores por posición
+function filtrarJugadoresPorPosicion(posicion) {
+  // Obtener los jugadores filtrados según la posición seleccionada
+  const jugadoresFiltrados = jugadores.filter(jugador => {
+    return posicion.toLowerCase() === 'todos' || jugador.posicion.toLowerCase() === posicion.toLowerCase();
+  });  
+  // Mostrar los jugadores filtrados en la tabla  
   displayJugadores(jugadoresFiltrados);
 }
 
-
-// Evento de escucha para el cambio de posición y apellido
+// Evento de escucha para el cambio de posición
 posicionSelect.addEventListener('change', () => {
-  const posicionSeleccionada = posicionSelect.value;
-  const apellidoIngresado = apellidoInput.value;
-  filtrarJugadores(posicionSeleccionada, apellidoIngresado);
-});
-
-apellidoInput.addEventListener('input', () => {
-  const posicionSeleccionada = posicionSelect.value;
-  const apellidoIngresado = apellidoInput.value;
-  filtrarJugadores(posicionSeleccionada, apellidoIngresado);
+  const seleccion = posicionSelect.value;
+  filtrarJugadoresPorPosicion(seleccion);
+  console.log(seleccion)
 });
 
 // Función para mostrar los jugadores en la tabla
 function displayJugadores(jugadores) {
-  //console.log(jugadores);
-  const jugadoresTableBody = document.getElementById('jugadores-table-body');
+  console.log(jugadores);
   jugadoresTableBody.innerHTML = '';
   jugadores.forEach(jugador => {
     const row = document.createElement('tr');
